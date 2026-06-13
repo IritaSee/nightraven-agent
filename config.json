@@ -1,0 +1,601 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "~/.nanobot/workspace",
+      "modelPreset": null,
+      "model": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "maxTokens": 16256,
+      "contextWindowTokens": 65536,
+      "contextBlockLimit": null,
+      "temperature": 0.3,
+      "fallbackModels": [],
+      "maxToolIterations": 50,
+      "maxConcurrentSubagents": 1,
+      "maxToolResultChars": 16000,
+      "providerRetryMode": "standard",
+      "toolHintMaxLength": 40,
+      "reasoningEffort": null,
+      "timezone": "UTC",
+      "botName": "Nightraven",
+      "botIcon": "\ud83d\udc26\u200d\u2b1b",
+      "unifiedSession": false,
+      "disabledSkills": [],
+      "idleCompactAfterMinutes": 0,
+      "maxMessages": 120,
+      "consolidationRatio": 0.5,
+      "dream": {
+        "enabled": true,
+        "intervalH": 2,
+        "modelOverride": null,
+        "maxBatchSize": 20,
+        "maxIterations": 15,
+        "annotateLineAges": true
+      }
+    }
+  },
+  "channels": {
+    "sendProgress": true,
+    "sendToolHints": true,
+    "showReasoning": true,
+    "extractDocumentText": true,
+    "sendMaxRetries": 3,
+    "transcriptionProvider": "groq",
+    "transcriptionLanguage": null,
+    "dingtalk": {
+      "enabled": false,
+      "clientId": "",
+      "clientSecret": "",
+      "allowFrom": [],
+      "allowRemoteMediaRedirects": false,
+      "remoteMediaRedirectAllowedHosts": []
+    },
+    "discord": {
+      "enabled": false,
+      "token": "",
+      "allowFrom": [],
+      "gatewayUrl": "wss://gateway.discord.gg/?v=10&encoding=json",
+      "intents": 37377,
+      "groupPolicy": "mention",
+      "allowChannels": [],
+      "readReceiptEmoji": "\ud83d\udc40",
+      "workingEmoji": "\ud83d\udd27",
+      "workingEmojiDelay": 2.0,
+      "streaming": true,
+      "proxy": null,
+      "proxyUsername": null,
+      "proxyPassword": null
+    },
+    "email": {
+      "enabled": false,
+      "consentGranted": false,
+      "imapHost": "",
+      "imapPort": 993,
+      "imapUsername": "",
+      "imapPassword": "",
+      "imapMailbox": "INBOX",
+      "imapUseSsl": true,
+      "smtpHost": "",
+      "smtpPort": 587,
+      "smtpUsername": "",
+      "smtpPassword": "",
+      "smtpUseTls": true,
+      "smtpUseSsl": false,
+      "fromAddress": "",
+      "autoReplyEnabled": true,
+      "pollIntervalSeconds": 30,
+      "markSeen": true,
+      "maxBodyChars": 12000,
+      "subjectPrefix": "Re: ",
+      "allowFrom": [],
+      "verifyDkim": true,
+      "verifySpf": true,
+      "allowedAttachmentTypes": [],
+      "maxAttachmentSize": 2000000,
+      "maxAttachmentsPerEmail": 5
+    },
+    "feishu": {
+      "enabled": false,
+      "appId": "",
+      "appSecret": "",
+      "encryptKey": "",
+      "verificationToken": "",
+      "allowFrom": [],
+      "reactEmoji": "THUMBSUP",
+      "groupPolicy": "mention",
+      "replyToMessage": false,
+      "doneEmoji": null,
+      "toolHintPrefix": "\ud83d\udd27",
+      "streaming": true,
+      "domain": "feishu",
+      "topicIsolation": true
+    },
+    "mochat": {
+      "enabled": false,
+      "baseUrl": "https://mochat.io",
+      "socketUrl": "",
+      "socketPath": "/socket.io",
+      "socketDisableMsgpack": false,
+      "socketReconnectDelayMs": 1000,
+      "socketMaxReconnectDelayMs": 10000,
+      "socketConnectTimeoutMs": 10000,
+      "refreshIntervalMs": 30000,
+      "watchTimeoutMs": 25000,
+      "watchLimit": 100,
+      "retryDelayMs": 500,
+      "maxRetryAttempts": 0,
+      "clawToken": "",
+      "agentUserId": "",
+      "sessions": [],
+      "panels": [],
+      "allowFrom": [],
+      "mention": {
+        "requireInGroups": false
+      },
+      "groups": {},
+      "replyDelayMode": "non-mention",
+      "replyDelayMs": 120000
+    },
+    "qq": {
+      "enabled": false,
+      "appId": "",
+      "secret": "",
+      "allowFrom": [],
+      "msgFormat": "plain",
+      "ackMessage": "\u23f3 Processing...",
+      "mediaDir": "",
+      "downloadChunkSize": 262144,
+      "downloadMaxBytes": 209715200
+    },
+    "slack": {
+      "enabled": false,
+      "mode": "socket",
+      "webhookPath": "/slack/events",
+      "botToken": "",
+      "appToken": "",
+      "userTokenReadOnly": "",
+      "replyInThread": true,
+      "reactEmoji": "eyes",
+      "allowFrom": [],
+      "groupPolicy": "mention",
+      "groupAllowFrom": [],
+      "dm": {
+        "enabled": true,
+        "policy": "open",
+        "allowFrom": []
+      },
+      "doneEmoji": "white_check_mark",
+      "includeThreadContext": true,
+      "threadContextLimit": 20
+    },
+    "telegram": {
+      "enabled": true,
+      "token": "",
+      "allowFrom": [
+        "Aliffandyy",
+        "YanuarAlfiN",
+        "iganarendra",
+        "prabhaisvarisadhaka",
+        "swastiwulan"
+      ],
+      "proxy": null,
+      "replyToMessage": true,
+      "groupPolicy": "mention",
+      "reactEmoji": "\ud83d\udc40",
+      "connectionPoolSize": 32,
+      "poolTimeout": 5.0,
+      "streaming": true,
+      "inlineKeyboards": false,
+      "streamEditInterval": 0.6,
+      "mode": "polling",
+      "webhookUrl": "",
+      "webhookListenHost": "127.0.0.1",
+      "webhookListenPort": 8081,
+      "webhookPath": "/telegram",
+      "webhookSecretToken": "",
+      "webhookMaxConnections": 4
+    },
+    "wecom": {
+      "enabled": false,
+      "botId": "",
+      "secret": "",
+      "allowFrom": [],
+      "welcomeMessage": ""
+    },
+    "whatsapp": {
+      "enabled": false,
+      "bridgeUrl": "ws://localhost:3001",
+      "bridgeToken": "",
+      "allowFrom": [],
+      "groupPolicy": "open"
+    },
+    "msteams": {
+      "enabled": false,
+      "appId": "",
+      "appPassword": "",
+      "tenantId": "",
+      "host": "0.0.0.0",
+      "port": 3978,
+      "path": "/api/messages",
+      "allowFrom": [],
+      "replyInThread": true,
+      "mentionOnlyResponse": "Hi \u2014 what can I help with?",
+      "validateInboundAuth": true,
+      "refTtlDays": 30,
+      "pruneWebChatRefs": true,
+      "pruneNonPersonalRefs": true,
+      "refTouchIntervalS": 300,
+      "trustedServiceUrlHosts": [
+        "smba.trafficmanager.net",
+        "smba.infra.gcc.teams.microsoft.com",
+        "smba.infra.gov.teams.microsoft.us",
+        "smba.infra.dod.teams.microsoft.us",
+        "*.botframework.com"
+      ]
+    },
+    "websocket": {
+      "enabled": false,
+      "host": "127.0.0.1",
+      "port": 8765,
+      "path": "/",
+      "token": "",
+      "tokenIssuePath": "",
+      "tokenIssueSecret": "",
+      "tokenTtlS": 300,
+      "websocketRequiresToken": true,
+      "allowFrom": [
+        "*"
+      ],
+      "streaming": true,
+      "maxMessageBytes": 37748736,
+      "pingIntervalS": 20.0,
+      "pingTimeoutS": 20.0,
+      "sslCertfile": "",
+      "sslKeyfile": "",
+      "unixSocketPath": ""
+    },
+    "weixin": {
+      "enabled": false,
+      "allowFrom": [],
+      "baseUrl": "https://ilinkai.weixin.qq.com",
+      "cdnBaseUrl": "https://novac2c.cdn.weixin.qq.com/c2c",
+      "routeTag": null,
+      "token": "",
+      "stateDir": "",
+      "pollTimeout": 35
+    },
+    "signal": {
+      "enabled": false,
+      "phoneNumber": "",
+      "daemonHost": "localhost",
+      "daemonPort": 8080,
+      "groupMessageBufferSize": 20,
+      "attachmentsDir": null,
+      "dm": {
+        "enabled": false,
+        "policy": "allowlist",
+        "allowFrom": []
+      },
+      "group": {
+        "enabled": false,
+        "policy": "allowlist",
+        "allowFrom": [],
+        "requireMention": true
+      },
+      "allowFrom": []
+    }
+  },
+  "providers": {
+    "custom": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "azureOpenai": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "bedrock": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null,
+      "region": null,
+      "profile": null
+    },
+    "anthropic": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "openai": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "openrouter": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "huggingface": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "skywork": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "deepseek": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "groq": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "zhipu": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "dashscope": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "vllm": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "ollama": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "lmStudio": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "atomicChat": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "ovms": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "gemini": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "moonshot": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "minimax": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "minimaxAnthropic": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "mistral": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "stepfun": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "xiaomiMimo": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "longcat": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "antLing": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "aihubmix": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "siliconflow": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "novita": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "volcengine": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "volcengineCodingPlan": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "byteplus": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "byteplusCodingPlan": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "qianfan": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    },
+    "nvidia": {
+      "apiKey": "",
+      "apiBase": null,
+      "apiType": "auto",
+      "extraHeaders": null,
+      "extraBody": null
+    }
+  },
+  "api": {
+    "host": "127.0.0.1",
+    "port": 8900,
+    "timeout": 120.0
+  },
+  "gateway": {
+    "host": "0.0.0.0",
+    "port": 18790,
+    "heartbeat": {
+      "enabled": true,
+      "intervalS": 1800,
+      "keepRecentMessages": 8
+    }
+  },
+  "tools": {
+    "web": {
+      "enable": true,
+      "proxy": null,
+      "userAgent": null,
+      "search": {
+        "provider": "brave",
+        "apiKey": "",
+        "baseUrl": "",
+        "maxResults": 7,
+        "timeout": 60
+      },
+      "fetch": {
+        "useJinaReader": true
+      }
+    },
+    "exec": {
+      "enable": true,
+      "timeout": 60,
+      "pathAppend": "",
+      "sandbox": "",
+      "allowedEnvKeys": [],
+      "allowPatterns": [],
+      "denyPatterns": []
+    },
+    "cliApps": {
+      "enable": true,
+      "installTimeout": 300,
+      "runTimeout": 60,
+      "catalogTtlSeconds": 3600
+    },
+    "my": {
+      "enable": true,
+      "allowSet": false
+    },
+    "imageGeneration": {
+      "enabled": false,
+      "provider": "openrouter",
+      "model": "openai/gpt-5.4-image-2",
+      "defaultAspectRatio": "1:1",
+      "defaultImageSize": "1K",
+      "maxImagesPerTurn": 4,
+      "saveDir": "generated"
+    },
+    "restrictToWorkspace": false,
+    "webuiAllowLocalServiceAccess": true,
+    "mcpServers": {},
+    "ssrfWhitelist": []
+  },
+  "model_presets": {}
+}
